@@ -13,7 +13,7 @@ app = dash.Dash(
     __name__,
     meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
 )
-app.title = "Dashboard energia"
+app.title = "Dashboard de demanda energética"
 
 server = app.server
 app.config.suppress_callback_exceptions = True
@@ -40,7 +40,7 @@ def plot_series(data, initial_date, proy):
             x=data_plot.index,
             y=data_plot['AT_load_actual_entsoe_transparency'],
             mode='lines',
-            line=dict(color="#188463"),
+            line=dict(color="#ff7f0e"),
         ),
         go.Scatter(
             name='Proyección',
@@ -101,7 +101,7 @@ def description_card():
         id="description-card",
         children=[
             #html.H5("Proyecto 1"),
-            html.H3("Pronóstico de producción energética"),
+            html.H3("Pronóstico de demanda energética total en Austria"),
             html.Div(
                 id="intro",
                 children="Esta herramienta contiene información sobre la demanda energética total en Austria cada hora según lo públicado en ENTSO-E Data Portal. Adicionalmente, permite realizar pronósticos hasta 5 dias en el futuro."
