@@ -47,7 +47,7 @@ def plot_series(data, initial_date, proy):
             x=data_plot.index,
             y=data_plot['forecast'],
             mode='lines',
-            line=dict(color="#bbffeb",),
+            line=dict(color="#ffd966",),
         ),
         go.Scatter(
             name='Upper Bound',
@@ -79,7 +79,7 @@ def plot_series(data, initial_date, proy):
             xanchor="right",
             x=1
         ),
-        yaxis_title='Demanda total [MW]',
+        yaxis_title='Demanda energetica total [MW]',
         #title='Continuous, variable value error bars',
         hovermode="x"
     )
